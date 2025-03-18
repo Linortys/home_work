@@ -2,9 +2,12 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 driver = webdriver.Chrome()
-driver.get("https://www.saucedemo.com/")
+
+def open_url():
+    driver.get("https://www.saucedemo.com/")
 
 
+open_url()
 username_find = driver.find_element(By.ID, 'user-name')
 pass_find = driver.find_element(By.ID, 'password')
 submit_find = driver.find_element(By.ID, 'login-button')
